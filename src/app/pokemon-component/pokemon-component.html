@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="display-4 text-center">Tabela de Pokemon do 1 ao 168</div>
+
+ <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sprite(Imagem)</th>
+        <th scope="col">Altura</th>
+        <th scope="col">Peso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of pokemon()">
+        <th scope="row">{{p.id}}</th>
+        <td>{{p.name}}</td>
+        <td><img [src]="p.sprites.front_default"></td>
+        <td>{{p.height}}</td>
+        <td>{{p.weight}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
